@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igallet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 14:08:16 by igallet           #+#    #+#             */
-/*   Updated: 2022/07/14 14:08:34 by igallet          ###   ########.fr       */
+/*   Created: 2022/07/15 13:11:16 by igallet           #+#    #+#             */
+/*   Updated: 2022/07/15 13:30:34 by igallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+int	ft_strcmp(char *s1, char *s2)
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
+	while (s1[i] == s2[i] && s1[i] && s2[i])
 		i++ ;
-	}
+	return (s1[i] - s2[i]);
 }
+
