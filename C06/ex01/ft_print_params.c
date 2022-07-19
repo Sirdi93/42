@@ -6,7 +6,7 @@
 /*   By: igallet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 11:05:13 by igallet           #+#    #+#             */
-/*   Updated: 2022/07/15 11:34:08 by igallet          ###   ########.fr       */
+/*   Updated: 2022/07/19 14:42:13 by igallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,16 @@ void	ft_putstr(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
-		write(1, &str[i], 1);
+		write (1, &str[i], 1);
 		i++;
 	}
 }
+
 int	main(int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (argv[i])
@@ -34,4 +35,5 @@ int	main(int argc, char **argv)
 		i++ ;
 		write(1, "\n", 1);
 	}
+	(void) argc;
 }
